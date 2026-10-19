@@ -68,24 +68,24 @@
           <p>좋은 결과는 명확한 전략과 섬세한 실행에서 시작됩니다. 최근 가장 애정하는 프로젝트를 소개합니다.</p>
         </div>
         <div class="project-list">
-          <article class="project-card project-orange reveal">
+          <article class="project-card project-orange reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="프로젝트 자세히 보기: Pulse Analytics" data-project-id="pulse">
             <div class="project-visual visual-dashboard">
               <div class="visual-top"><span class="mini-logo">◒</span><span>pulse / 24</span><span>•••</span></div>
               <div class="visual-content"><span class="chart-number">84.6<small>%</small></span><div class="chart-line"></div><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
             </div>
-            <div class="project-info"><div><span class="project-index">01</span><h3>Pulse Analytics</h3></div><p>Product Design · Frontend</p><a href="#contact" aria-label="Pulse Analytics 자세히 문의">↗</a></div>
+            <div class="project-info"><div><span class="project-index">01</span><h3>Pulse Analytics</h3></div><p>Product Design · Frontend</p><span class="project-open" aria-hidden="true">↗</span></div>
           </article>
-          <article class="project-card project-blue reveal">
+          <article class="project-card project-blue reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="프로젝트 자세히 보기: Wayfinder" data-project-id="wayfinder">
             <div class="project-visual visual-museum">
               <span class="museum-title">way<br>finder</span><span class="museum-circle"></span><span class="museum-caption">A guide to<br>new places.</span>
             </div>
-            <div class="project-info"><div><span class="project-index">02</span><h3>Wayfinder</h3></div><p>Branding · Web Design</p><a href="#contact" aria-label="Wayfinder 자세히 문의">↗</a></div>
+            <div class="project-info"><div><span class="project-index">02</span><h3>Wayfinder</h3></div><p>Branding · Web Design</p><span class="project-open" aria-hidden="true">↗</span></div>
           </article>
-          <article class="project-card project-lilac reveal">
+          <article class="project-card project-lilac reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="프로젝트 자세히 보기: Moneta App" data-project-id="moneta">
             <div class="project-visual visual-finance">
               <div class="finance-header"><span>moneta</span><span>⌁</span></div><div class="finance-balance"><small>Total balance</small><strong>$24,890.20</strong></div><div class="finance-buttons"><span>Send</span><span>Request</span></div>
             </div>
-            <div class="project-info"><div><span class="project-index">03</span><h3>Moneta App</h3></div><p>UX/UI · Mobile App</p><a href="#contact" aria-label="Moneta App 자세히 문의">↗</a></div>
+            <div class="project-info"><div><span class="project-index">03</span><h3>Moneta App</h3></div><p>UX/UI · Mobile App</p><span class="project-open" aria-hidden="true">↗</span></div>
           </article>
         </div>
       </section>
@@ -98,7 +98,7 @@
           <div class="contact-links">
             <a href="mailto:hello@minjun.dev">hello@minjun.dev <span>↗</span></a>
             <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+            <a href="https://rememberapp.co.kr/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
           </div>
         </div>
         <form class="contact-form reveal" id="contact-form">
@@ -119,6 +119,20 @@
       <span>Made with intention <span class="footer-star">✳</span></span>
       <a href="#top">Back to top ↑</a>
     </footer>
+  </div>
+  <div class="modal-backdrop" id="project-modal" hidden>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+      <button class="modal-close" type="button" aria-label="프로젝트 상세 정보 닫기">×</button>
+      <p class="eyebrow">Selected project</p>
+      <h2 id="modal-title" data-project-name></h2>
+      <p id="modal-description" class="modal-description" data-project-description></p>
+      <dl class="modal-details">
+        <div><dt>담당 역할</dt><dd data-project-role></dd></div>
+        <div><dt>사용 기술</dt><dd data-project-technologies></dd></div>
+        <div><dt>주요 성과</dt><dd data-project-outcome></dd></div>
+      </dl>
+      <p class="modal-note">※ 아래 내용은 이해를 돕기 위한 예시이며, 실제 프로젝트 정보가 아닙니다.</p>
+    </section>
   </div>
   <script src="script.js"></script>
 </body>
